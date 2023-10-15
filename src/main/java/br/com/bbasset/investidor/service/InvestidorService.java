@@ -23,11 +23,11 @@ public class InvestidorService {
         return repositorioInvestidor.listar();
     }
 
-    public void inserir(Investidor investidor) {
+    public Investidor inserir(Investidor investidor) {
         Optional<Investidor> investidorOpt =
                 repositorioInvestidor.buscarPorCpf(investidor.getCpf());
         if (investidorOpt.isEmpty()) {
-            repositorioInvestidor.inserir(investidor);
+            return repositorioInvestidor.inserir(investidor);
         } else {
             throw new InvestidorJaExisteException(investidor.getCpf());
         }

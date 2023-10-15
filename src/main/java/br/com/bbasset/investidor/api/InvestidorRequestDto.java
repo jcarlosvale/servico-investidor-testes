@@ -5,7 +5,7 @@ import br.com.bbasset.investidor.model.StatusInvestidor;
 
 import java.util.UUID;
 
-public class InserirInvestidorRequestDto {
+public class InvestidorRequestDto {
     private String nome;
     private String cpf;
 

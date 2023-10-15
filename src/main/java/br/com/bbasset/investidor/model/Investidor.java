@@ -1,5 +1,7 @@
 package br.com.bbasset.investidor.model;
 
+import br.com.bbasset.investidor.api.InvestidorResponseDto;
+
 import java.util.UUID;
 
 public class Investidor {
@@ -38,5 +40,14 @@ public class Investidor {
 
     public void setStatus(StatusInvestidor status) {
         this.status = status;
+    }
+
+    public InvestidorResponseDto converterParaInvestidorResponseDto() {
+        InvestidorResponseDto investidorResponseDto = new InvestidorResponseDto();
+        investidorResponseDto.setNome(this.getNome());
+        investidorResponseDto.setCpf(this.getCpf());
+        investidorResponseDto.setId(this.getId().toString());
+        investidorResponseDto.setStatus(this.getStatus().name());
+        return investidorResponseDto;
     }
 }

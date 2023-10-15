@@ -19,8 +19,9 @@ public class InMemoryRepositorioInvestidor implements RepositorioInvestidor {
     }
 
     @Override
-    public void inserir(Investidor entidade) {
+    public Investidor inserir(Investidor entidade) {
         investidores.add(entidade);
+        return entidade;
     }
 
     @Override

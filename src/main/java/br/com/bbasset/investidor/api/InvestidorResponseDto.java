@@ -1,7 +1,5 @@
 package br.com.bbasset.investidor.api;
 
-import br.com.bbasset.investidor.model.Investidor;
-
 // POJO
 public class InvestidorResponseDto {
     private String id;
@@ -39,14 +37,5 @@ public class InvestidorResponseDto {
 
     public void setStatus(String status) {
         this.status = status;
-    }
-
-    public static InvestidorResponseDto converterParaInvestidorResponseDto(Investidor investidor) {
-        InvestidorResponseDto investidorResponseDto = new InvestidorResponseDto();
-        investidorResponseDto.setNome(investidor.getNome());
-        investidorResponseDto.setCpf(investidor.getCpf());
-        investidorResponseDto.setId(investidor.getId().toString());
-        investidorResponseDto.setStatus(investidor.getStatus().name());
-        return investidorResponseDto;
     }
 }
