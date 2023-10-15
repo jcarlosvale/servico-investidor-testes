@@ -3,6 +3,7 @@ package br.com.bbasset.investidor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+//http://localhost:8080/swagger-ui/
 @SpringBootApplication
 public class ServicoDeInvestidoresApplication {
 
